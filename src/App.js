@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
-import Search from './components/search'
-import List from './components/list'
-
-export default class App extends Component {
-  state = {users:[]}
-  saveUsers = (users) => {
- 
-    this.setState({users})
-  }
+import {Route} from 'react-router-dom'
+import { Button, Space } from 'antd-mobile'
+import Home from './components/Home'
+import About from './components/About'
+import MyNavLink from './components/MyNavLink'
+class App extends Component {
   render() {
-    const {users} = this.state
     return (
-      <div className='container'>
-        <Search saveUsers={ this.saveUsers} />
-        <List users={ users} />
+      <div>
+        <Space wrap>
+          <MyNavLink to='/about'>About</MyNavLink>
+          <MyNavLink to='/home'>Home</MyNavLink>
+        </Space>
+
+        <Route path='/about' component={About}/>
+        <Route path='/home' component={Home}/>
       </div>
     )
   }
 }
+
+export default App
