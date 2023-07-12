@@ -17,7 +17,9 @@ export default class App extends Component {
   }
   //删除方法
   deleteTodo=(id)=>{
+
   const { todos } = this.state
+
     const newTodoList = todos.filter((todoObj) => todoObj.id != id)
 
     this.setState({todos:newTodoList})
