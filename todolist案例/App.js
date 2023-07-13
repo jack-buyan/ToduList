@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react'
+import React, { PureComponent} from 'react'
 import logo from './logo.svg';
 import Header from './component/Header'
 import List from './component/List';
@@ -7,7 +7,7 @@ import Footer from './component/Footer';
 import './App.css';
 
 
-export default class App extends Component {
+export default class App extends PureComponent {
   state = {
     todos: [
       { id: '001', name: '吃饭', done: true },

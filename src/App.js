@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
-import Count from './components/Count'
-class App extends Component {
-  render() {
-    return (
-      <div>
-       <Count/>
-      </div>
-    )
-  }
-}
+import React,{Fragment} from 'react'
+import Demo from './components/Demo'
 
-export default App
+export default function App(){
+  return(
+    <Fragment>
+      <Demo></Demo>
+    </Fragment>
+  )
+}
